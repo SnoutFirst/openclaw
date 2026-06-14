@@ -964,7 +964,7 @@ output and whose artifact paths are resolved relative to that producer
 `qa run --qa-profile`, the same `qa-evidence.json` also includes the profile
 scorecard summary for the selected taxonomy categories.
 Treat it as a discovery aid, not a gate replacement; the selected scenario still needs the right provider mode, live transport, Multipass, Testbox, or release lane for the behavior under test.
-For release scorecard context, see [Maturity tests](/reference/maturity-tests).
+For scorecard context, see [Maturity tests](/reference/maturity-tests).
 
 For character and style checks, run the same scenario across multiple live model
 refs and write a judged Markdown report:
