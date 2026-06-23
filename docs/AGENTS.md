@@ -26,13 +26,9 @@ This directory owns docs authoring, Mintlify link rules, and docs i18n policy.
 
 ## Maturity Scorecard Editing
 
-- `taxonomy.yaml` owns surfaces, categories, feature coverage IDs, maturity levels, QA profile membership, and `human_lts_override` source values.
-- `docs/maturity-scores.yaml` owns the current subjective maturity score snapshot generated or refreshed by `claw-score`. Treat Coverage, Quality, Completeness, and manual LTS support in this file as reviewed score state, not deterministic QA evidence.
-- `qa-evidence.json.scorecard` owns deterministic per-run QA evidence: category and feature fulfillment, covered or missing coverage IDs, and run evidence counts. Keep this evidence in GitHub Actions artifacts unless a maintainer explicitly asks to commit a sanitized projection.
-- Generated scorecard pages such as `docs/maturity-scorecard.md`, `docs/taxonomy.md`, and `docs/taxonomy-outline.md` are projections. Do not hand-edit generated score, LTS, taxonomy, QA profile, or evidence tables; change the YAML/artifact inputs and rerender.
-- Human score overrides are optional review actions, not the happy path. A human override must be introduced through a PR, must modify source score state rather than rendered Markdown, and must explain the reason plus public or redacted evidence in the PR body or review thread.
-- If an override changes LTS support, update the source field that owns the decision: `taxonomy.yaml` for `human_lts_override` and `docs/maturity-scores.yaml` only for the rendered current score snapshot after regeneration.
-- Do not put maintainer proposal docs, private audit notes, discrawl summaries, or release-history registry drafts in published docs. Use private/RFC storage for proposal work until a maintainer explicitly creates a public docs surface.
+`taxonomy.yaml` and `docs/maturity-scores.yaml` are the source inputs; generated maturity docs under `docs/maturity/` are projections and should not be hand-edited for score, LTS, taxonomy, QA profile, or evidence tables.
+Keep deterministic `qa-evidence.json.scorecard` data in GitHub Actions artifacts unless a maintainer explicitly asks for a sanitized committed projection.
+Human overrides must change source state in a PR and explain the reason plus public or redacted evidence.
 
 ## Docs i18n
 

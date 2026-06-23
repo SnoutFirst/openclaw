@@ -9,6 +9,8 @@ title: "Maturity tests"
 
 Maturity tests are QA evidence linked to the OpenClaw maturity scorecard. They help maintainers see which scorecard categories already have runnable proof and which ones still need coverage.
 
+Generated maturity docs use stable routes for the [Maturity scorecard](/maturity/scorecard) and [Maturity taxonomy](/maturity/taxonomy).
+
 The scorecard has two source files:
 
 - `taxonomy.yaml` defines surfaces, categories, maturity levels, profile membership, and feature coverage IDs.
@@ -16,9 +18,9 @@ The scorecard has two source files:
 
 QA scenarios connect to the scorecard by using the same coverage IDs:
 
-- `qa/scenarios/**/*.md` stores `coverage.primary` and `coverage.secondary` IDs.
+- QA scenario metadata stores `coverage.primary` and `coverage.secondary` IDs.
 - `extensions/qa-lab` joins scenario coverage to the taxonomy report.
-- `qa suite` writes `qa-evidence.json` for the scenarios it runs.
+- `qa suite` writes `qa-evidence.json` for the scenarios it runs; profile runs can include a `scorecard` summary for the selected taxonomy categories.
 
 ## Find Coverage
 
@@ -37,7 +39,7 @@ When a category needs new evidence:
 
 1. Start from the matching `taxonomy.yaml` surface and category.
 2. Reuse an existing feature `coverageIds` value, or add a broad behavior-shaped ID.
-3. Add that ID to `coverage.primary` in the scenario that proves it.
+3. Add that ID to `coverage.primary` in the scenario metadata that proves it.
 4. Use `coverage.secondary` only for supporting evidence.
 5. Add useful `docsRefs` and `codeRefs` to the scenario.
 6. Run `pnpm openclaw qa coverage --match <coverage-id>` and then run the smallest relevant scenario or test lane.
@@ -47,3 +49,5 @@ When a category needs new evidence:
 - [QA overview](/concepts/qa-e2e-automation)
 - [Testing](/help/testing)
 - [Matrix QA](/concepts/qa-matrix)
+- [Maturity scorecard](/maturity/scorecard)
+- [Maturity taxonomy](/maturity/taxonomy)

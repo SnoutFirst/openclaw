@@ -944,6 +944,14 @@
     "target": "Matrix QA"
   },
   {
+    "source": "Maturity scorecard",
+    "target": "成熟度评分卡"
+  },
+  {
+    "source": "Maturity taxonomy",
+    "target": "成熟度分类"
+  },
+  {
     "source": "Maturity tests",
     "target": "成熟度测试"
   },

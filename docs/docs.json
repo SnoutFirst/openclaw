@@ -1655,6 +1655,15 @@
             ]
           },
           {
+            "tab": "Maturity",
+            "groups": [
+              {
+                "group": "Scorecard",
+                "pages": ["maturity/scorecard", "maturity/taxonomy", "reference/maturity-tests"]
+              }
+            ]
+          },
+          {
             "tab": "Reference",
             "groups": [
               {
@@ -1854,7 +1863,6 @@
                 "pages": [
                   "reference/RELEASING",
                   "reference/full-release-validation",
-                  "reference/maturity-tests",
                   "reference/release-performance-sweep",
                   "reference/test",
                   "ci",
