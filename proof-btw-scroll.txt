@@ -1,0 +1,10 @@
+BTW side-result body metrics from local Playwright run:
+{
+  "overflow": "auto",
+  "overflowY": "auto",
+  "maxHeight": "480px",
+  "clientHeight": 480,
+  "scrollHeight": 4576,
+  "scrollable": true
+}
+Screenshot: proof-btw-scroll.png
